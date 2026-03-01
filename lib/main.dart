@@ -40,7 +40,6 @@ class MyApp extends StatelessWidget {
                     const SizedBox(height: 12),
                     _buildInfoRow('Prodi', 'Sistem Informasi'),
                     const SizedBox(height: 12),
-                    // Tambahan Revisi: Fakultas
                     _buildInfoRow('Fakultas', 'Sains & Teknologi'),
                   ],
                 ),
@@ -51,8 +50,7 @@ class MyApp extends StatelessWidget {
                 'UNIVERSITAS TEKNOLOGI YOGYAKARTA',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize:
-                      20, // Sedikit lebih kecil dari judul agar proporsional
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.purple,
                   letterSpacing: 1.2,
