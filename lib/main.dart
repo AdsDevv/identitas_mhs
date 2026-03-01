@@ -13,13 +13,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Identitas Mahasiswa',
       home: Scaffold(
-        // Menyesuaikan warna background agar sedikit bernuansa cerah seperti gambar
         backgroundColor: const Color(0xFFFCF9FF),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Judul
+              // Judul Utama
               const Text(
                 'IDENTITAS MAHASISWA',
                 style: TextStyle(
@@ -30,6 +29,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 40),
+              // Blok Identitas
               SizedBox(
                 width: 350,
                 child: Column(
@@ -39,7 +39,23 @@ class MyApp extends StatelessWidget {
                     _buildInfoRow('Nama', 'Andri Adi Saputra'),
                     const SizedBox(height: 12),
                     _buildInfoRow('Prodi', 'Sistem Informasi'),
+                    const SizedBox(height: 12),
+                    // Tambahan Revisi: Fakultas
+                    _buildInfoRow('Fakultas', 'Sains & Teknologi'),
                   ],
+                ),
+              ),
+              const SizedBox(height: 40),
+              // Universitas
+              const Text(
+                'UNIVERSITAS TEKNOLOGI YOGYAKARTA',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize:
+                      20, // Sedikit lebih kecil dari judul agar proporsional
+                  fontWeight: FontWeight.bold,
+                  color: Colors.purple,
+                  letterSpacing: 1.2,
                 ),
               ),
             ],
@@ -54,7 +70,7 @@ class MyApp extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          width: 60,
+          width: 80,
           child: Text(
             label,
             style: const TextStyle(
